@@ -1,0 +1,53 @@
+<uml>
+  <class name="Jogo">
+    <attribute name="fases" type="Fase[]" />
+    <attribute name="notaFinal" type="float" />
+    <method name="iniciarJogo()" />
+    <method name="avancarFase()" />
+  </class>
+  
+  <class name="Fase">
+    <attribute name="objetivos" type="Objetivo[]" />
+    <attribute name="recursos" type="Recurso[]" />
+    <attribute name="inimigos" type="Inimigo[]" />
+    <attribute name="feridos" type="Personagem[]" />
+    <attribute name="civis" type="Personagem[]" />
+    <attribute name="tempoLimite" type="float" />
+    <attribute name="notaMaxima" type="float" />
+    <method name="completarObjetivo()" />
+    <method name="coletarRecurso()" />
+    <method name="lutar()" />
+    <method name="salvar()" />
+    <method name="verificarFimDeFase()" />
+  </class>
+  
+  <class name="Personagem">
+    <attribute name="nome" type="string" />
+    <attribute name="vida" type="float" />
+    <attribute name="ataque" type="float" />
+    <attribute name="defesa" type="float" />
+    <attribute name="velocidade" type="float" />
+    <method name="andar()" />
+    <method name="interagir()" />
+  </class>
+  
+  <class name="Objetivo">
+    <attribute name="descricao" type="string" />
+    <attribute name="completo" type="bool" />
+  </class>
+  
+  <class name="Recurso">
+    <attribute name="nome" type="string" />
+    <attribute name="quantidade" type="int" />
+  </class>
+  
+  <class name="Inimigo">
+    <attribute name="nome" type="string" />
+    <attribute name="vida" type="float" />
+    <attribute name="ataque" type="float" />
+    <attribute name="defesa" type="float" />
+    <attribute name="velocidade" type="float" />
+    <method name="atacar()" />
+    <method name="mover()" />
+  </class>
+</uml>
